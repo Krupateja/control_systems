@@ -1,0 +1,69 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+
+\title{CONTROL SYSTEMS
+}
+\author{GATE 2018 problem:46
+}
+\institute{\large  G Krupateja}
+\date{EE18BTECH11015}
+
+\begin{document}
+
+\frame{\titlepage}
+\begin{frame}
+\frametitle{Question:46}
+The unit step response of y(t) of a unity feedback system with an open loop transfer function  
+\[ G(s)H(S)=\frac{K}{(s+1)^2(s+2)}  \]
+is shown in figure. The value of K is(up to two decimal places).
+\end{frame}
+\begin{frame}
+\frametitle{Figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=10cm, height=8cm]{Screenshot (32).png}
+    
+    
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=10cm, height=4cm]{unit feedback.png}
+    Unit feedback system.
+    
+    
+    
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Solution}
+Given,
+\[ G(s)H(s)=\frac{K}{(s+1)^2(s+2)}  \]
+We know that the input and output relation for open loop transfer function for a unity feedback system is given by,
+\[ \frac{Y(s)}{X(s)}=\frac{G(s)}{1+G(s)H(s)}=\frac{G(s)}{1+G(s)}\]
+Now, substituting the G(s)H(s) in the above equation we will get the below,
+\[ \frac{Y(s)}{X(s)}=\frac{\frac{K}{(s+1)^2(s+2)}}{1+\frac{K}{(s+1)^2(s+2)}}\]
+\end{frame}
+\begin{frame}
+\frametitle{Solution continued}
+  \[ \frac{Y(s)}{X(s)}=\frac{K}{K+(s+1)^2(s+2)}  \]
+According to the question, \[X(s)=\frac{1}{s}\]
+So,\[Y(s)=\frac{1}{s} \  \frac{K}{K+(s+1)^2(s+2)}\]
+From final value theorem,
+\[y(\infty\;)=\lim_{s \rightarrow 0 }sY(s)=0.8\]
+[From the response shown in the figure steady state value in the time domain is 0.8]
+\end{frame}
+\begin{frame}
+\frametitle{Solution continued}
+\[\frac{K}{K+2}=0.8\]\\
+\[K=1.6+0.8K\]\\
+\[K=8\]\\
+Hence,the value of K is 8
+\end{frame}
+
+\end{document}
